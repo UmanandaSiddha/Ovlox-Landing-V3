@@ -1646,20 +1646,30 @@ html[data-tab-hidden="true"] *::after {
 
 /* ============== TOAST ============== */
 .toast {
-  position: fixed; top: 24px; left: 50%; transform: translateX(-50%);
+  position: fixed; right: 24px; bottom: 24px;
   z-index: 1000;
-  padding: 12px 20px;
+  max-width: calc(100vw - 48px);
+  padding: 12px 18px;
   border-radius: 10px;
   font-size: 14px; font-weight: 500;
   display: inline-flex; align-items: center; gap: 10px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-  animation: toastIn 0.3s ease both;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: toastIn 0.3s cubic-bezier(.2,.7,.2,1) both;
 }
-.toast.success { background: rgba(124, 246, 111, 0.1); border: 1px solid rgba(124, 246, 111, 0.3); color: var(--accent-2); }
-.toast.error { background: rgba(255, 91, 110, 0.1); border: 1px solid rgba(255, 91, 110, 0.3); color: var(--danger); }
+.toast.success { background: rgba(124, 246, 111, 0.14); border: 1px solid rgba(124, 246, 111, 0.35); color: var(--accent-2); }
+.toast.error { background: rgba(255, 91, 110, 0.14); border: 1px solid rgba(255, 91, 110, 0.35); color: var(--danger); }
 @keyframes toastIn {
-  from { opacity: 0; transform: translate(-50%, -16px); }
-  to { opacity: 1; transform: translate(-50%, 0); }
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (max-width: 540px) {
+  .toast { right: 16px; left: 16px; bottom: 16px; max-width: none; }
+  @keyframes toastIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @media (max-width: 1100px) {
