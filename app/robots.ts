@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://ovlox.dev";
+const SITE_URL = "https://www.ovlox.dev";
 
 export default function robots(): MetadataRoute.Robots {
   return {

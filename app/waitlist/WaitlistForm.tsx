@@ -36,7 +36,7 @@ export default function WaitlistForm() {
       form.reset();
       showToast(
         "success",
-        "You're on the list. Watch your inbox — we'll be in touch soon."
+        "Thanks for joining the waitlist — we'll reach out the moment we're live."
       );
     } catch {
       showToast(

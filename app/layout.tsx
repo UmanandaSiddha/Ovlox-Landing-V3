@@ -25,7 +25,7 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-const SITE_URL = "https://ovlox.dev";
+const SITE_URL = "https://www.ovlox.dev";
 const SITE_NAME = "Ovlox";
 const DEFAULT_TITLE = "Ovlox — Your project's single source of truth";
 const DEFAULT_DESCRIPTION =
