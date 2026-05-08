@@ -1,6 +1,6 @@
 export default function ProblemSection() {
   return (
-    <section className="s">
+    <section className="s" data-anim="off">
       <div className="s-inner">
         <div className="problem-wrap">
           <div className="chaos reveal">

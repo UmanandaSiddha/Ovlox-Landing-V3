@@ -2,7 +2,7 @@ import BrandIcon from "@/app/components/BrandIcon";
 
 export default function HowItWorks() {
   return (
-    <section className="s" id="how" style={{ paddingTop: 0 }}>
+    <section className="s" id="how" data-anim="off" style={{ paddingTop: 0 }}>
       <div className="s-inner">
         <div className="s-head-center reveal">
           <div className="eyebrow">How it works</div>

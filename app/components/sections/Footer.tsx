@@ -1,31 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
+import SectionLink from "@/app/components/SectionLink";
 
 export default function Footer() {
   return (
     <footer>
       <div className="ft-inner">
         <div className="ft-brand">
-          <a className="brand" href="#">
-            <Image src="/brand/ovlox_logo.svg" alt="Ovlox" height={50} width={90} priority />
-            {/* <span className="brand-mark">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="9 6 4 12 9 18" />
-                <polyline points="15 6 20 12 15 18" />
-              </svg>
-            </span>
-            <span className="brand-name">
-              Ovlox<span className="dev">.dev</span>
-            </span> */}
-          </a>
+          <Link className="brand" href="/">
+            <Image
+              src="/brand/ovlox_logo.svg"
+              alt="Ovlox"
+              height={50}
+              width={90}
+              priority
+            />
+          </Link>
           <div>
             The project intelligence layer for fast-moving teams. Your single
             source of truth.
@@ -35,16 +25,16 @@ export default function Footer() {
           <h5>Product</h5>
           <ul>
             <li>
-              <a href="#">Features</a>
+              <SectionLink section="features">Features</SectionLink>
             </li>
             <li>
-              <a href="#">Integrations</a>
+              <Link href="/coming-soon">Integrations</Link>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <Link href="/coming-soon">Pricing</Link>
             </li>
             <li>
-              <a href="#">Changelog</a>
+              <Link href="/coming-soon">Changelog</Link>
             </li>
           </ul>
         </div>
@@ -52,16 +42,16 @@ export default function Footer() {
           <h5>Company</h5>
           <ul>
             <li>
-              <a href="#">About</a>
+              <Link href="/coming-soon">About</Link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <Link href="/coming-soon">Blog</Link>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <Link href="/coming-soon">Careers</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -69,16 +59,16 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul>
             <li>
-              <a href="#">Docs</a>
+              <Link href="/coming-soon">Docs</Link>
             </li>
             <li>
-              <a href="#">API</a>
+              <Link href="/coming-soon">API</Link>
             </li>
             <li>
-              <a href="#">Status</a>
+              <Link href="/coming-soon">Status</Link>
             </li>
             <li>
-              <a href="#">Security</a>
+              <Link href="/coming-soon">Security</Link>
             </li>
           </ul>
         </div>
@@ -86,13 +76,13 @@ export default function Footer() {
           <h5>Legal</h5>
           <ul>
             <li>
-              <a href="#">Terms</a>
+              <Link href="/terms-of-service">Terms</Link>
             </li>
             <li>
-              <a href="#">Privacy</a>
+              <Link href="/privacy-policy">Privacy</Link>
             </li>
             <li>
-              <a href="#">DPA</a>
+              <Link href="/coming-soon">DPA</Link>
             </li>
           </ul>
         </div>

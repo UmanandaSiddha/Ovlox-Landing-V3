@@ -1,6 +1,6 @@
 export default function ICP() {
   return (
-    <section className="s" style={{ paddingTop: 0 }}>
+    <section className="s" data-anim="off" style={{ paddingTop: 0 }}>
       <div className="s-inner">
         <div className="s-head-center reveal">
           <div className="eyebrow">Built for</div>

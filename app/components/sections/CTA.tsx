@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function CTA() {
   return (
-    <section className="cta">
+    <section className="cta" data-anim="off">
       <div className="cta-inner">
         <h2 className="reveal">
           Stop guessing. <span className="it">Start knowing.</span>
@@ -9,7 +11,7 @@ export default function CTA() {
           Join teams running projects with clarity, not chaos.
         </p>
         <div className="cta-btns reveal delay-2">
-          <a href="#" className="btn btn-primary btn-lg">
+          <Link href="/waitlist" className="btn btn-primary btn-lg">
             Get started free
             <svg
               width="14"
@@ -24,10 +26,10 @@ export default function CTA() {
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
-          <a href="#" className="btn btn-line btn-lg">
+          </Link>
+          <Link href="/coming-soon" className="btn btn-line btn-lg">
             Book a demo
-          </a>
+          </Link>
         </div>
         <div className="hero-trust reveal delay-3" style={{ marginTop: 28 }}>
           <span className="dot" />

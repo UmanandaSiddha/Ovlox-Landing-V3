@@ -8,7 +8,7 @@ import {
 export default function IntegrationsMarquee() {
   const items: BrandKey[] = [...ALL_BRANDS, ...ALL_BRANDS];
   return (
-    <section className="integrations">
+    <section className="integrations" data-anim="off">
       <div className="int-label mono">
         — CONNECTS WITH THE TOOLS YOUR TEAM ALREADY USES —
       </div>

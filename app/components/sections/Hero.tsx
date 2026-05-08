@@ -1,8 +1,10 @@
+import Link from "next/link";
 import BrandIcon from "@/app/components/BrandIcon";
+import SectionLink from "@/app/components/SectionLink";
 
 export default function Hero() {
   return (
-    <header className="hero">
+    <header className="hero" data-anim="on">
       <div className="float-logos">
         <div className="float-logo fl1">
           <BrandIcon name="github" />
@@ -25,11 +27,11 @@ export default function Hero() {
       </div>
 
       <div className="hero-inner">
-        <a href="#" className="pill reveal in">
+        <Link href="/coming-soon" className="pill reveal in">
           <span className="pill-tag">NEW</span>
           <span>Ovlox AI now writes your weekly project digest</span>
           <span className="pill-arrow">→</span>
-        </a>
+        </Link>
         <h1 className="hero-title reveal in delay-1">
           Your project&apos;s <span className="accent">single source</span> of
           truth.
@@ -40,7 +42,7 @@ export default function Hero() {
           <b>in plain English</b>.
         </p>
         <div className="hero-cta reveal in delay-3">
-          <a href="#" className="btn btn-primary btn-lg">
+          <Link href="/waitlist" className="btn btn-primary btn-lg">
             Get started free
             <svg
               width="14"
@@ -55,8 +57,8 @@ export default function Hero() {
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
-          <a href="#how" className="btn btn-line btn-lg">
+          </Link>
+          <SectionLink section="how" className="btn btn-line btn-lg">
             <svg
               width="14"
               height="14"
@@ -70,7 +72,7 @@ export default function Hero() {
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
             See how it works
-          </a>
+          </SectionLink>
         </div>
         <div className="hero-trust reveal in delay-4">
           <span className="dot" />

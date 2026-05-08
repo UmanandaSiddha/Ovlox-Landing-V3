@@ -1,4 +1,4 @@
-import ClientFX from "@/app/components/ClientFX";
+import { Suspense } from "react";
 import Navbar from "@/app/components/sections/Navbar";
 import Hero from "@/app/components/sections/Hero";
 import IntegrationsMarquee from "@/app/components/sections/IntegrationsMarquee";
@@ -9,11 +9,17 @@ import ValueProp from "@/app/components/sections/ValueProp";
 import HowItWorks from "@/app/components/sections/HowItWorks";
 import CTA from "@/app/components/sections/CTA";
 import Footer from "@/app/components/sections/Footer";
+import ScrollToSection from "@/app/components/ScrollToSection";
+
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export default function Home() {
   return (
     <>
-      <ClientFX />
+      <Suspense fallback={null}>
+        <ScrollToSection />
+      </Suspense>
       <Navbar />
       <Hero />
       <IntegrationsMarquee />

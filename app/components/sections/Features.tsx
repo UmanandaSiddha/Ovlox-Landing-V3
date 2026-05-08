@@ -14,7 +14,7 @@ const compatTiles: BrandKey[] = [
 
 export default function Features() {
   return (
-    <section className="s" id="features" style={{ paddingTop: 0 }}>
+    <section className="s" id="features" data-anim="off" style={{ paddingTop: 0 }}>
       <div className="s-inner">
         <div className="s-head-center reveal">
           <div className="eyebrow">What Ovlox does</div>
@@ -395,14 +395,7 @@ export default function Features() {
           </div>
 
           {/* F4 + F5 pair */}
-          <div
-            className="feat-pair"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 24,
-            }}
-          >
+          <div className="feat-pair">
             <div
               className="feature reveal"
               style={{ gridTemplateColumns: "1fr", padding: 36 }}
@@ -421,7 +414,7 @@ export default function Features() {
                   you already have, and grows with you as your stack changes.
                 </p>
               </div>
-              <div className="vis" style={{ aspectRatio: "2 / 1" }}>
+              <div className="vis">
                 <div className="vis-bar">
                   <div className="dot" />
                   30+ tools, one layer
@@ -476,7 +469,7 @@ export default function Features() {
                   the same source of truth.
                 </p>
               </div>
-              <div className="vis" style={{ aspectRatio: "2 / 1" }}>
+              <div className="vis">
                 <div className="vis-bar">
                   <div className="dot" />
                   same data · 3 lenses
